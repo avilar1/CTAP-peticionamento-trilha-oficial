@@ -1,0 +1,116 @@
+@import url(base.css);
+
+.__input::-webkit-input-placeholder{
+    font-weight: 500 ;
+    color: #B6BABE;
+    margin-top: 5px ;
+    text-align: start;
+    justify-content: center;
+    padding-bottom: 5px ;
+}
+
+select.form-control {
+    -webkit-appearance: menulist;
+}
+
+.__input::-webkit-input-placeholder{
+    font-weight: 500 ;
+    color: #B6BABE;
+    margin-top: 5px ;
+    text-align: start;
+    justify-content: center;
+    padding-bottom: 5px ;
+}
+
+.form-control .__input{
+    padding: 4px;
+    margin-top: 5px;
+    
+}
+
+.form-control.__input {
+    width: auto;
+    min-width: 2rem;
+}
+
+.__grupo-camp > fieldset {
+    margin-top: 20px;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: end;
+}
+
+fieldset [data-inputestado].__label-comum  {
+    width: 200px;
+} 
+
+
+fieldset > .__label-comum {
+    width: auto;
+    grid-row: 1;
+}
+
+fieldset > .__label-comum .form-control.__input {
+    width: 100%;
+}
+
+/*início estilização de inputs*/
+
+
+
+input[type=color] {
+    max-width: 2rem;
+}
+
+input[type=date]{
+    max-width: 125px;
+}
+
+input[type=datetime-local],
+input[type=month],
+input[type=week] {
+    max-width: 165px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .__grupo-camp > fieldset {
+        margin-top: 0px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        
+    }
+
+    fieldset > .__label-comum {
+        width: 100%;
+    }
+
+    .__grupo-camp > fieldset > div,
+    .__grupo-camp > fieldset > fieldset{
+        width: 100%;
+    }
+
+    .__grupo-camp label {
+        margin-top: 20px;
+    }
+
+    .__grupo-camp h2 {
+        margin-bottom: 0px;
+    }
+    
+    .form-control.__input {
+        width: calc(100vw - 36px);
+    }
+
+
+}
+

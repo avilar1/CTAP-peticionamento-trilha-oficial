@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55W2LPV');</script>
+<!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9FXBBWXEP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R9FXBBWXEP');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Listagem das solicitações de peticionamento externo">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="http://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+
+    <link href="assets-bs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/corpo-ms.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/nav-e-filtro.css">
+    <!-- <link rel="stylesheet" href="assets/css/tabela/linhas-de-desktop.css">
+    <link rel="stylesheet" href="assets/css/tabela/linhas.css">
+    <link rel="stylesheet" href="assets/css/tabela/titulo.css"> -->
+    <link rel="stylesheet" href="assets/css/tabela/tabela-geral.css">
+
+    <title>Módulo de Peticionamento - Cidadão</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55W2LPV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+      <header>
+       <div class="__cabecalho">
+          <div class="__cabecalho-conteudo ">
+              
+            <div class="__painel-logo">
+              <a href="https://carioca.rio"><p>Carioca Digital</p></a>     
+            </div>
+            
+            <div class="__painel-login">
+              <p>Olá, <span> João!</span> <span>Você está conectado(a)</span></p>
+              <details id="mostrar" class="__mostrar" open>
+                <summary><i></i></summary>
+                <div class="__informacoes">
+                  <div class="__informacoes-dados">
+                    <ul>
+                      <li><p>João Fernandes Almeida</p></li>
+                      <li><a href="">jfernandes10@gmail.com</a> </li>
+                    </ul>                        
+                  </div>
+                  <div class="__informacoes-logout">
+                    <button class="btn btn-outline-primary btn-sm __sair">Sair</button>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="__area-h1">
+            <h1>Minhas solicitações</h1>
+        </div>
+        <div class="__area-nav">
+          <nav>
+            <fieldset>
+              <div class="__check">
+                <input type="checkbox" name="arquivadas" id="checkaquirvadas">
+                <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+              </div>
+              
+              <div class="dropdown" role="menu">
+                <a class="btn btn-secondary dropdown-toggle __dropdown-btn" id="selecione" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ordenar por
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                  <li><a class="dropdown-item " href="#" data-m="1" data-f="nso">Número da solicitação</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="2" data-f="dso">Data da solicitação</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="3" data-f="srv">Serviço</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="4" data-f="org">Órgão</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="5" data-f="uta">Última  atualização</a></li>
+                  <li><a class="dropdown-item" href="#" data-m="6" data-f="sit">Situação</a></li>
+                </ul>
+              </div>
+
+              
+            </fieldset>
+          
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+              <p>Últimos</p>
+              <div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnTrinta" autocomplete="off" 
+                  data-filtro="trinta" data-valor=140>
+                  <label class="btn btn-outline-primary" for="btnTrinta">
+                    30 dias
+                  </label>
+                </div>
+      <!--IMPORTANTE: em produção, trocar o data-valor pelo número correto. No modelo. ele é feito apenas para teste-->
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo dois">
+                  <input type="radio" class="btn-check " name="btnradio" id="btnSessenta" autocomplete="off"
+                    data-filtro="sessenta" data-valor=150>
+                  <label class="btn btn-outline-primary" for="btnSessenta">60 dias
+                  </label>
+                </div>
+      
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo tres">
+                  <input type="radio" class="btn-check " name="btnradio" id="btnNoventa" autocomplete="off"
+                    data-filtro="noventa" data-valor=160 checked>
+                  <label class="btn btn-outline-primary" for="btnNoventa">90 dias
+                    <button type="button" class="__close-inline" aria-label="Close" id="closebutton"></button>
+                  </label>
+                </div>
+      
+                <div class="btn-group btn-group-sm" role="group" aria-label="grupo tres">
+                  <input type="radio" class="btn-check " name="btnradio" id="btnCentoEVinte" autocomplete="off"
+                    data-filtro="centoevinte" data-valor=190>
+                  <label class="btn btn-outline-primary" for="btnCentoEVinte">120 dias
+                  </label>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+    
+    <noscript>
+        <p>Esse site precisa de uma linguagem de programação chamada "JavaScript" para funcionar corretamente no
+            seu navegador e esse não se encontra funcionando. <br> Caso tenha dificuldade de acessar essa tela e
+            veja essa mensagem, procure auxílio nos canais da prefeitura.</p>
+    </noscript>
+
+    <main>
+
+      <div class="__container" id="container">
+        <table id="container">
+          <thead >
+            <!-- class="card" -->
+            <tr data-corpo="linhacorpo">
+
+              <th id="cardT1" class="nselected" data-t="1">Número da solicitação</th>
+              <th id="cardT2" class="nselected" data-t="2">Data da solicitação</th>
+              <th id="cardT3" class="nselected" data-t="3">Serviço</th>
+              <th id="cardT4" class="nselected" data-t="4">Órgão</th>
+              <th id="cardT5" class="nselected" data-t="5">Última atualização</th>
+              <th id="cardT6" class="nselected" data-t="6">Situação</th>
+
+            </tr>
+          </thead>
+    <tbody id="modelo" data-tbody>
+      <!--As informações entram aqui ao consumir API do backend, usando TEMPLATE STRING. Abaixo, há meramente um exemplo que será zerado
+      para editar esse html, inserindo id, por exemplo, recomenda mudar o template string.
+    Se preferrir inserir os cards de outra forma, abaixo o modelo.-->
+
+      <tr class="__card-corpo-desk" id="" data-desk="row" data-padrao="desk" >
+        <td id="cardI1-desk" data-desk="nso"><a href="#" data-desk="nsoD"></a></td>
+        <td id="cardI2-desk" data-desk="dso"></td>
+        <td id="cardI3-desk" data-desk="srv"></td>
+        <td id="cardI4-desk" data-desk="org"></td>
+        <td id="cardI5-desk" data-desk="uta"></td>
+        <td id="cardI6-desk" data-desk="sit"><a href="#" data-desk="sitA" ></a></td>
+       
+      </tr>
+
+        <tr class="" data-linha data-padrao="mob">
+            <td class="accordion accordion-flush" id="" data-acc="aflush">
+                      
+                     <div class="accordion-item" id="accordionitem" data-acc="aitem">
+                        <h2 class="accordion-header" id="" data-acc="ahone">
+                          <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="" aria-expanded="false" aria-controls="" data-acc="abutton" data-id="" data-qualacc="">
+                             
+                          </button>      
+                        </h2>
+                        
+                        <div class="accordion-collapse collapse" aria-labelledby="" data-bs-parent="#accordionFlushExample" data-acc="acone">
+                          <div class="accordion-body" id="accordionbody" data-acc="abody">
+                            <dl class="__card-corpo" id="cardbody" data-acc="acardb" >
+                              <dd id="cardI6"><a href="#" data-acc="acardisit" ></a></dd>
+                              <dt id="cardTi1" data-acc="acardtnso">Número da solicitação </dt>             <dd id="cardI1" ><a href="#" data-acc="acardinso"></a></dd>
+                              <dt id="cardTi2" data-acc="acardtdso">Data da solicitação</dt>               <dd id="cardI2" data-acc="acardidso"></dd>
+                              <dt id="cardTi3" data-acc="acardtsrv">Serviço</dt>                           <dd id="cardI3" data-acc="acardisrv"></dd>
+                              <dt id="cardTi4" data-acc="acardtorg">Órgão</dt>                             <dd id="cardI4" data-acc="acardiorg"></dd>
+                              <dt id="cardTi5" data-acc="acardtuta">Última atualização</dt>                <dd id="cardI5" data-acc="acardiuta"></dd>
+                              <dt id="cardTi6" data-acc="acardtsit">Situação</dt>                          
+                              <a href="#">Veja mais detalhes</a>
+                            </dl>
+                          </div>
+                        </div>
+                        <div id="" data-acc="asit" class="__extra-situacao" data-toggle="collapse" data-qualacc="" data-extra style="display:block;"><a data-acc="acardisit"></a></div>
+                      </div>
+              </td>    
+          </tr>
+    </tbody>
+</table>
+        
+        
+      </div>
+
+      <footer>
+          <div>
+              <div class="__page-selected"> <a href="#">1</a></div>
+              <div class="__page-not-selected"> <a href="#">2</a></div>
+              <div id="proxima"> <a href="#">próxima</a> </div>
+          </div>
+      </footer>
+
+    </main>
+
+
+
+    <script src="js/ms/filtro.js" type="module"></script>
+    <script src="js/ms/populador.js" type="module"></script>
+    <script src="js/ms/tabela.js" type="module"></script>
+    <script src="js/ms/dropdown.js" type="module"></script>
+    <!-- <script src="js/ms/acc.js" type="module"></script> -->
+    <script src="js/ms/filtrarDados.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
