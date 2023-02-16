@@ -1,0 +1,93 @@
+@import url(base.css);
+
+footer {
+  align-items: center;
+  background-color: var(--offwhite-fundo);
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer .__page-selected a {
+  color: var(--offwhite-fundo)
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.__page-selected {
+  align-items: center;
+  display: flex;
+  background-color: var(--azul-botao);
+  border: 2px;
+  border-color: var(--offwhite-fundo);
+  border-radius: 50px;
+  color: var(--branco);
+  font-size: 15px;
+  height: 40px;
+  line-height: 20px;
+  margin-right: 10px;
+  justify-content: center;
+  transition: 0.7s;
+  width: 40px;
+
+}
+.__page-selected:hover {
+  border-color: var(--azul-botao);
+}
+
+.__page-not-selected {
+  align-items: center;
+  background-color: var(--offwhite-fundo);
+  border-radius: 50%;
+  color: var(--azul-botao);
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.__page-not-selected a {
+  color: var(--azul-botao);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+footer > div > div:last-child {
+
+  align-items: center;
+  background-color: var(--offwhite-fundo);
+  border-radius: 50%;
+  color: var(--azul-botao);
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* #proxima {
+} */
+
+footer > div > div:last-child a {
+
+  color: var(--azul-botao);
+}
+
+/* #proxima a {
+} */
+
+@media (max-width: 780px) {
+
+ main footer {
+    display: none;
+  }
+
+}
