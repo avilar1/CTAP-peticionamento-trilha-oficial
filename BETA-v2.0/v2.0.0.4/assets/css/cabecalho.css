@@ -42,15 +42,15 @@ header>div:first-child>div {
 
 }
 
-details>summary {
+header details>summary {
     list-style: none;
 }
 
-summary::-webkit-details-marker {
+header summary::-webkit-details-marker {
     display: none;
 }
 
-summary::after,
+header summary::after,
 .__painel-login>p::after {
     content: url(../img/seta\ baixo\ login.webp);
 }

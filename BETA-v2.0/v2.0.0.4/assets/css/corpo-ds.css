@@ -71,6 +71,14 @@ body a {
     border: none;
 }
 
+.__containerTimeLine ul li:only-of-type:after {
+    content: '';
+    position: absolute;
+    width: 0;
+}
+
+
+
 .collapse .card.card-body {
     max-height: 80px;
     overflow: hidden;

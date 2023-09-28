@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div class="__grupo" aria-label="grupo representante legal">
+    <!--acc-->
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed __acc-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" data-accordion>
+            <div>
+
+
+              <label class="__el-esp">
+                <input type="checkbox" name="" id="check-terceiros" data-checkbox onchange="invalidarSeNaoEstiverMarcado()">
+                Solicitação feita por representante legal
+              </label>
+            </div>
+          </button>
+        </h3>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <fieldset>
+              <label class="form-label __label-comum">Nome completo do representado
+                <input type="text" name="cid_nomeRequerente" class="form-control" id="nomeCompletoInteressado"
+                  placeholder="Nome e Sobrenome" data-nomedointeressado>
+                <div class="invalid-feedback">
+                  Preencha esse campo
+                </div>
+              </label>
+            </fieldset>
+            <fieldset>
+              <label>
+                <input type="radio" class="form-check-input" name="cpfCnpj" id="cpfInput" value="cpf"
+                  onchange="alternarCpfCnpj(this.value);invalidarSeNaoEstiverMarcado();" />
+                CPF</label>
+              <label>
+                <input type="radio" class="form-check-input" name="cpfCnpj" id="cnpjInput" value="cnpj"
+                  onchange="alternarCpfCnpj(this.value);invalidarSeNaoEstiverMarcado();" />
+                CNPJ</label>
+
+              <div class="invalid-feedback">
+                Preencha esse campo</div>
+            </fieldset>
+
+            <fieldset id="cpfInteressadoFld" style="display: none;">
+              <label class="form-label __label-comum">
+                CPF do representado
+                <input type="text" class="form-control __input-comum" id="cpfInteressadoTxt" name="cid_cpfRequerente"
+                  value="" placeholder="000.000.000-00"
+                  onblur="mascaraCPF(this.value);isValidCPF(this.value);clearTimeout();" data-cpfdointeressado />
+
+                <div class="invalid-feedback">
+                  Preencha esse campo</div>
+              </label>
+            </fieldset>
+
+            <fieldset id="cnpjInteressadoFld" style="display: none;">
+              <label class="form-label __label-comum">
+                CNPJ do representado
+                <input type="text" class="form-control __input-comum" id="cnpjInteressadoTxt" name="cid_cnpjRequerente"
+                  value="" style="max-width: 165px;" placeholder="00.000.000/0000-00"
+                  onblur="mascaraCNPJ(this.value);isValidCNPJ(this.value);clearTimeout();" data-cnpjdointeressado />
+              </label>
+              <div class="invalid-feedback">
+                Formato inválido
+              </div>
+              </label>
+            </fieldset>
+
+            <p class="__el-comum" id="aviso">Ao anexar documentos, é obrigatório incluir a procuração ou documento
+              comprobatório da condição de representante legal.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/javascript">
+    let cpf = document.getElementById("cpfInteressadoFld");
+    let cnpj = document.getElementById("cnpjInteressadoFld");
+    function alternarCpfCnpj(valor) {
+
+      if (valor == "cpf") {
+        cpf.style.display = "block";
+        cnpj.style.display = "none";
+      }
+      if (valor == "cnpj") {
+        cpf.style.display = "none";
+        cnpj.style.display = "block";
+      }
+    }
+
+    function invalidarSeNaoEstiverMarcado() {
+      let check = document.getElementById("check-terceiros");
+      let nome = document.getElementById("nomeCompletoInteressado");
+      let cpf = document.getElementById("cpfInteressadoTxt");
+      let cnpj = document.getElementById("cnpjInteressadoTxt");
+      let cpfRadio = document.getElementById("cpfInput");
+      let cnpjRadio = document.getElementById("cnpjInput");
+
+      if (check.checked == false) {
+        nome.name = "";
+        cpf.name = "";
+        cnpj.name = "";
+        nome.required = false;
+        cpf.required = false;
+        cnpj.required = false;
+        cpfRadio.required = false;
+        cnpjRadio.required = false;
+      } else if(check.checked == true && cpfRadio.checked == true) {
+        nome.name = "cid_nomeRequerente";
+        cpf.name = "cid_cpfRequerente";
+        cnpj.name = "";
+        cpf.required = true;
+        cnpj.required = false;
+      }else if(check.checked == true && cnpjRadio.checked == true){
+        nome.name = "cid_nomeRequerente";
+        cpf.name = "";
+        cnpj.name = "cid_cnpjRequerente";
+        cnpj.required = true;
+        cpf.required = false;
+      }
+    }
+
+    function mascaraCPF(cpf) {
+      var cpf = cpf.replace(/\D/g, "");
+      cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+      cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+      cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+      return cpf;
+    }
+
+    function mascaraCNPJ(cnpj) {
+      var cnpj = cnpj.replace(/\D/g, "");
+      cnpj = cnpj.replace(/(\d{2})(\d)/, "$1.$2");
+      cnpj = cnpj.replace(/(\d{3})(\d)/, "$1.$2");
+      cnpj = cnpj.replace(/(\d{3})(\d)/, "$1/$2");
+      cnpj = cnpj.replace(/(\d{4})(\d)/, "$1-$2");
+      return cnpj;
+    }
+
+    function isValidCPF(cpf) {
+      var soma = 0;
+      var resto;
+      if (cpf == "00000000000") return false;
+
+      for (i = 1; i <= 9; i++) soma = soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
+      resto = (soma * 10) % 11;
+
+      if ((resto == 10) || (resto == 11)) resto = 0;
+      if (resto != parseInt(cpf.substring(9, 10))) return false;
+
+      soma = 0;
+      for (i = 1; i <= 10; i++) soma = soma + parseInt(cpf.substring(i - 1, i)) * (12 - i);
+      resto = (soma * 10) % 11;
+
+      if ((resto == 10) || (resto == 11)) resto = 0;
+      if (resto != parseInt(cpf.substring(10, 11))) return false;
+      return true;
+    }
+
+    function isValidCNPJ(cnpj) {
+      cnpj = cnpj.replace(/[^\d]+/g, '');
+
+      if (cnpj == '') return false;
+
+      if (cnpj.length != 14)
+        return false;
+
+      // Elimina CNPJs invalidos conhecidos
+      if (cnpj == "00000000000000" ||
+        cnpj == "11111111111111" ||
+        cnpj == "22222222222222" ||
+        cnpj == "33333333333333" ||
+        cnpj == "44444444444444" ||
+        cnpj == "55555555555555" ||
+        cnpj == "66666666666666" ||
+        cnpj == "77777777777777" ||
+        cnpj == "88888888888888" ||
+        cnpj == "99999999999999")
+        return false;
+
+      // Valida DVs
+      tamanho = cnpj.length - 2
+      numeros = cnpj.substring(0, tamanho);
+      digitos = cnpj.substring(tamanho);
+      soma = 0;
+      pos = tamanho - 7;
+      for (i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2)
+          pos = 9;
+      }
+      resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(0))
+        return false;
+
+      tamanho = tamanho + 1;
+      numeros = cnpj.substring(0, tamanho);
+      soma = 0;
+      pos = tamanho - 7;
+      for (i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2)
+          pos = 9;
+      }
+      resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(1))
+        return false;
+
+      return true;
+
+    }
+  </script>
+</body>
+
+</html>

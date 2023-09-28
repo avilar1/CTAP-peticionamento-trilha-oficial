@@ -1,0 +1,26 @@
+@import url(base.css);
+
+.__grupo-complementar li {
+    margin-bottom: 0px;
+    font-size: 15px;
+    line-height: 20px;
+    list-style-type: "—";
+
+    color: var(--cinza-letra);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: start;
+    width: 100%;
+}
+
+.__grupo-complementar ul {
+    list-style: initial;
+    padding-inline-start: 23px;
+}
+
+@media screen and (max-width: 480px) {
+    .__grupo-complementar li:last-of-type{
+        margin-bottom: 0px;
+    }
+}
