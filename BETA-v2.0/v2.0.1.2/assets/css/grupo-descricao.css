@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(base.css);
 
 .__grupo-desc>textarea{
@@ -34,3 +35,41 @@
 color: var(--cinza-formulario);
 }
 
+=======
+@import url(base.css);
+
+.__grupo-desc>textarea{
+    height: auto;
+}
+
+.__grupo-desc textarea {
+    border-color: var(--cinza-cinza);
+    font-family: museo;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 20px;
+    margin-top: 5px;
+    padding: 6px 4px;
+    text-align: start;
+}
+
+/* #inputDescricao{
+    border-color: var(--cinza-cinza);
+    font-family: museo;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 20px;
+    margin-top: 5px;
+    padding: 6px 4px;
+    text-align: start;
+} */
+
+.__grupo-desc textarea::-webkit-input-placeholder{
+color: var(--cinza-formulario);
+}
+
+>>>>>>> a4706e7be1a68f165e5662dcc0a52265a3f98cdd

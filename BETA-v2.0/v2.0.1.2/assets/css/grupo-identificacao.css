@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(base.css);
 
 .invalido > span{
@@ -18,4 +19,26 @@ dl dd, dt + dd {
 
 dl:last-child {
     margin-bottom: 0;
+=======
+@import url(base.css);
+
+.invalido > span{
+    background-color: red;
+    color: var(--branco);
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 6px;
+}
+
+dt + dd {
+    margin-left: 4px;
+}
+
+dl dd, dt + dd {
+    margin-bottom: 20px;
+}
+
+dl:last-child {
+    margin-bottom: 0;
+>>>>>>> a4706e7be1a68f165e5662dcc0a52265a3f98cdd
 }

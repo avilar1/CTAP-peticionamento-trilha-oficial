@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(base.css);
 
 .__grupo-docs li {
@@ -15,4 +16,23 @@
     .__grupo-docs li:last-of-type{
         margin-bottom: 0px;
     }
+=======
+@import url(base.css);
+
+.__grupo-docs li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.__grupo-docs ul {
+    list-style: initial;
+    padding-inline-start: 23px;
+}
+
+@media screen and (max-width: 480px) {
+    .__grupo-docs li:last-of-type{
+        margin-bottom: 0px;
+    }
+>>>>>>> a4706e7be1a68f165e5662dcc0a52265a3f98cdd
 }

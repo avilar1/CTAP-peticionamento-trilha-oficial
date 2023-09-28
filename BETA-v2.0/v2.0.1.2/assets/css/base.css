@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
     --branco-branco: #ffffff;
     --branco: #fff;
@@ -77,3 +78,84 @@ var(--cinza-escuro-variante); */
     font-display: auto;
 }
 
+=======
+:root {
+    --branco-branco: #ffffff;
+    --branco: #fff;
+    --branco-variante: #d9d9d9;
+    --branco-menu: #ececec;
+    --offwhite-fundo: #f5f5f5;
+    --preto-preto: #000000;
+    --preto: #000;
+    --preto-variante: #212529;
+    --azul: #0d6efd;
+    --azul-turquesa: #02b0d6;
+    --azul-turquesa-variante: #01b1d8;
+    --azul-link: #2670e8;
+    --azul-botao: #4579fb;
+    --azul-variante: #366BBF;
+    --verde-agua: #09b88a;
+    --verde: #198754;
+    --vermelho: #f41717;
+    --cinza-cinza: #cccccc;
+    --cinza: #ccc;
+    --cinza-formulario: #B6BABE;
+    --cinza-letra: #7b7b7b;
+    --cinza-borda: #eae6e6;
+    --cinza-claro-campo: #c3c0c0;
+    --cinza-claro-variante: #c8c6c6;
+    --cinza-escuro-variante: #686868;
+}
+
+/* var(--branco-branco);
+var(--branco)
+var(--branco-variante);
+var(--branco-menu);
+var(--offwhite-fundo);
+var(--preto-preto);
+var(--preto)
+var(--preto-variante);
+var(--azul)
+var(--azul-turquesa);
+var(--azul-turquesa-variante);
+var(--azul-link);
+var(--azul-botao);
+var(--azul-variante);
+var(--verde-agua);
+var(--verde);
+var(--vermelho);
+var(--cinza);
+var(--cinza-cinza);
+var(--cinza-formulario);
+var(--cinza-letra);
+var(--cinza-borda);
+var(--cinza-claro-campo);
+var(--cinza-claro-variante);
+var(--cinza-escuro-variante); */
+
+
+@font-face {
+    font-family: museo;
+    src: url(../fonts/MuseoSans_500.otf) format("OpenType");
+    font-display: auto;
+}
+
+@font-face {
+    font-family: museo700;
+    src: url(../fonts/MuseoSans_700.otf) format("OpenType");
+    font-display: auto;
+}
+
+@font-face {
+    font-family: museo300;
+    src: url(../fonts/MuseoSans-300.otf) format("OpenType");
+    font-display: auto;
+}
+
+@font-face {
+    font-family: Rawline;
+    src: url("../fonts/rawline-600.woff") format("woff");
+    font-display: auto;
+}
+
+>>>>>>> a4706e7be1a68f165e5662dcc0a52265a3f98cdd
